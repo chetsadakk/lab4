@@ -1,62 +1,55 @@
 name: New Feature report
 description: Report feature
-title: "Feature"
+title: "[Feature]: "
 labels: ["bug", "triage"]
 projects: ["octo-org/1", "octo-org/44"]
 assignees:
-- octocat
+  - octocat
 body:
-  
-type: input
-  id: contact
-  attributes:
-    label: Contact Details
-    description: What is your name?
-    placeholder: ex. Chetsada kankarn
-  validations:
-    required: false
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this report!
 
-  
-type: markdown
-  attributes:
-    value: |
-      Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: What is your name?
+      placeholder: ex. Chetsada kankarn
+    validations:
+      required: false
 
-  
-type: dropdown
-  id: request
-  attributes:
-    label: Type of request?
-    description: select the type of your request
-    options:
-New Feature
-Bug Fix
-default: 0
-validations:
-  required: true
+  - type: dropdown
+    id: request
+    attributes:
+      label: Type of request?
+      description: select the type of your request
+      options:
+        - New Feature
+        - Bug Fix
+    validations:
+      required: true
 
-  
-type: dropdown
-  id: browsers
-  attributes:
-    label: What is the OS which you want to suggest?
-    multiple: true
-    options:
-Windows
-Linux
-MacOS
-Other
-default: 0
-validations:
-  required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What is the OS which you want to suggest?
+      multiple: true
+      options:
+        - Windows
+        - Linux
+        - MacOS
+        - Other
+    validations:
+      required: true
 
-  
-type: textarea
-  id: logs
-  attributes:
-    label: What are the detail of your suggestion?
-    description: Explain what do you want
-    render: shell
-    value: "Feature deatil!"
-  validations:
-    required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: What are the detail of your suggestion?
+      description: Explain what do you want
+      render: shell
+      value: "Feature detail!"
+    validations:
+      required: true
